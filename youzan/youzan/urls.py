@@ -23,4 +23,3 @@ urlpatterns = [
     url(r"^api/", include(api.urls))
 ]
 
-"dsfjk"
