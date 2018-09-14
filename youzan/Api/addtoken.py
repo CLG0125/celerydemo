@@ -27,7 +27,7 @@ def create_token(par):
     payload = {"username": par, "iat": time.time()}
     payload = encrypt(payload)
     md5 = hashlib.md5()
-    md5.upload("{header}.{payload}".format(header=header, payload=payload).encode())
+    md5.update("{header}.{payload}".format(header=header, payload=payload).encode())
     signature = md5.hexdigest()
     token = "{header}.{payload}.{signature}".format(header=header, payload=payload, signature=signature)
     return token
