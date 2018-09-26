@@ -20,6 +20,7 @@ celery -A 包名  worker -l info -P eventlet:这句话的意思是 celery的实�
 
 
 关于日志打印的的问题
+
 1.日志配置的相关代码在settings.py中
 
 2.日志存放的位置在djlog中
@@ -39,3 +40,7 @@ logger = logging.getLogger(\__name__\)
 # 第二种:
 logger = logging.getLogger("big")
 # 直接指定logger配置logger的时候不需要用层级关系命名,
+
+关于token生成以及解码的问题
+
+1.代码详情请见api目录
