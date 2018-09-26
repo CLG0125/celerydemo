@@ -30,3 +30,12 @@ celery -A 包名  worker -l info -P eventlet:这句话的意思是 celery的实�
 infosyn.youzanapp的意思就是在这个包范围内的所有处理函数,都可以自动寻找到该logger进行处理.
 
 5.logger = logging.getLogger(__name__)这个实例化的logger 在启动时会去寻找符合当前模块的层级关系的logger也就是在settings.py中定义的infosyn.youzanapp,所有符合这个层级关系的处理函数都可以使用该模块
+
+6.# logger的方式有两种:
+# 第一种:
+logger = logging.getLogger(__name__)
+# 这种方式需要在配置logger的时候名称用层级关系命名,例如"infosyn.app"
+
+# 第二种:
+logger = logging.getLogger("big")
+# 直接指定logger配置logger的时候不需要用层级关系命名,
