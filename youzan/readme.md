@@ -33,7 +33,7 @@ infosyn.youzanapp的意思就是在这个包范围内的所有处理函数,都�
 
 6.# logger的方式有两种:
 # 第一种:
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(\__name__\)
 # 这种方式需要在配置logger的时候名称用层级关系命名,例如"infosyn.app"
 
 # 第二种:
